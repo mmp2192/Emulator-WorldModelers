@@ -7,8 +7,6 @@ args = commandArgs(trailingOnly = TRUE)
 library(R.matlab)
 library(RANN)
 
-#today = as.numeric(format(Sys.Date(),"%Y"))
-#allyears = c((today-5):(today-1))
 allyears = c(1983:2016)
 
 lat = readMat("https://portal.nccs.nasa.gov/datashare/GISS/Impacts/AgMIP/WorldModelers/EastAfrica/Emulator_Parameters/EastAfrica_AgGRIDlat.mat")
