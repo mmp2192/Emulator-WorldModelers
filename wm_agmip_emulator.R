@@ -402,5 +402,4 @@ for (ii in c(1:length(gridlons))){
 	}
 }
 
-write.csv(df, paste(dir, "/output/EmuYield_T", tempchange, "_P", precipchange, "_BoxLat_", southlat, "N-", northlat, "N_BoxLon_", westlon, "E-", eastlon, "E.csv", sep=""), row.names=F)
-
+write.csv(df, paste(dir, "/output/", thiscrop, "EmuYield_T", tempchange, "_P", precipchange, "_BoxLat_", southlat, "N-", northlat, "N_BoxLon_", westlon, "E-", eastlon, "E.csv", sep=""), row.names=F)
