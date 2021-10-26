@@ -89,7 +89,7 @@ for (ii in c(1:length(gridlons))){
 		if (thislon>180){
 	        thislon = thislon-180
 		}
-		if (!is.na(regionpday[subjj,subii])){
+		if ((!is.na(regionpday[subjj,subii]))&&(!is.na(regiongslength[subjj,subii]))){
 			
 			### isolate growing season dates for this pixel
 			pday = round(regionpday[subjj,subii])
