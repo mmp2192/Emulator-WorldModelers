@@ -7,6 +7,7 @@ args = commandArgs(trailingOnly = TRUE)
 library(R.matlab)
 library(RANN)
 
+today = as.numeric(format(Sys.Date(),"%Y"))
 allyears = c(1983:2016)
 
 lat = readMat("https://portal.nccs.nasa.gov/datashare/GISS/Impacts/AgMIP/WorldModelers/EastAfrica/Emulator_Parameters/EastAfrica_AgGRIDlat.mat")
@@ -397,9 +398,9 @@ for (ii in c(1:length(gridlons))){
 		df[counter,1] = thislat
 		df[counter,2] = thislon
 		df[counter,3] = output[jj,ii]
-		df[counter,4] = "sens_test"
+		df[counter,4] = today
 		counter = counter+1
 	}
 }
 
-write.csv(df, paste(dir, "/output/", thiscrop, "EmuYield_T", tempchange, "_P", precipchange, "_BoxLat_", southlat, "N-", northlat, "N_BoxLon_", westlon, "E-", eastlon, "E.csv", sep=""), row.names=F)
+write.csv(df, paste(dir, "/output/output.csv", sep=""), row.names=F)
