@@ -383,6 +383,9 @@ for (ii in c(1:length(gridlons))){
 	}
 }
 
+output[which(output>100)] = 100
+output[which(output<(-100))] = -100
+
 ncells = length(gridlats)*length(gridlons)
 
 df = data.frame(latitude = NA, longitude = NA, yield_anomaly = NA, time = NA)
